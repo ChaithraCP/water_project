@@ -33,7 +33,7 @@ WORKDIR /app
 
 # Copy renv.lock and R files
 COPY renv.lock .
-COPY 19th june 6th session.R .
+COPY 19th_june_6th_session.R .
 
 # Restore R packages using renv
 RUN R -e "renv::restore()"
@@ -42,5 +42,5 @@ RUN R -e "renv::restore()"
 EXPOSE 3838
 
 # Run Shiny app
-CMD ["R", "-e", "shiny::runApp('/app/19th june 6th session.R', host='0.0.0.0', port=3838)"]
+CMD ["R", "-e", "shiny::runApp('/app/19th_june_6th_session.R', host='0.0.0.0', port=3838)"]
 
